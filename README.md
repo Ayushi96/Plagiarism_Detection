@@ -17,15 +17,18 @@ This project will be broken down into three main notebooks:
 
 * Clean and pre-process the text data.
 * Define features for comparing the similarity of an answer text and a source text, and extract similarity features.
-* Select "good" features, by analyzing the correlations between different features.
+* The features explored were _Containment Score_ and _LCS score_ . The _Containment Score_ was calculated on n-grams where n ~ range(1, 11)
+* Select "good" features, by analyzing the correlations between different features. The features with the lease correlation was chosen to train the model.
 * Create train/test `.csv` files that hold the relevant features and class labels for train/test data points.
 
 **Notebook 3: Train and Deploy Your Model in SageMaker**
 
-* Upload your train/test feature data to S3.
-* Define a binary classification model and a training script.
-* Train your model and deploy it using SageMaker.
-* Evaluate your deployed classifier.
+* Upload train/test feature data to S3.
+* Define a binary classification model and a training script. 
+* I tried out _SVM and Random Forest_ models and RF seemed to perform better
+* Train Randon Forest model and deploy it using SageMaker.
+* The accuracy of the model turned out to be 96%
+
 
 ---
 
